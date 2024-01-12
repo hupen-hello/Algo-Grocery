@@ -1,23 +1,20 @@
 import React from 'react'
-import About from './About'
+import Shopproduct from './Shopproduct'
 import Topbar from '../Layout/Topbar'
 import Header from '../Layout/Header'
 import Footer from '../Layout/Footer'
 
-function ContactMain() {
+function Shop() {
   return (
     <>
     <div>
       <Topbar/>
       <Header/>
-        <About/>
-        <Footer/>
-
-
+      <Shopproduct/>
+      <Footer/>
     </div>
-    
     </>
   )
 }
 
-export default ContactMain
+export default Shop

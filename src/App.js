@@ -18,14 +18,14 @@ import './Component/Assets/js/a (3).js'
 import './Component/Assets/js/a (4).js'
 import './Component/Assets/js/a (5).js'
 import './Component/Assets/js/a (6).js'
-// import './Component/Assets/js/a (7).js'
+import './Component/Assets/js/a (7).js'
 import './Component/Assets/js/a (8).js'
 import './Component/Assets/js/a (9).js'
 import './Component/Assets/js/a (10).js'
 import './Component/Assets/js/a (11).js'
 import './Component/Assets/js/a (12).js'
 import './Component/Assets/js/a (13).js'
-// import './Component/Assets/js/a (14).js'
+import './Component/Assets/js/a (14).js'
 import './Component/Assets/js/a (15).js'
 import './Component/Assets/js/a (16).js'
 import './Component/Assets/js/a (17).js'
@@ -41,11 +41,17 @@ import './Component/Assets/js/a (27).js'
 import Footer from './Component/Layout/Footer.jsx';
 import Header from './Component/Layout/Header.jsx';
 import Home from './Component/Home/index.jsx';
+import Contact from './Component/Contact/index.jsx';
+import Shop from './Component/Shop/index.jsx';
+import ShopFilter from './Component/Shop/ShopFilter.jsx';
 
 function App() {
   return (
    <>
-   <Home/>
+    {/* <Home/>  */}
+   {/* <Contact/> */}
+   {/* <Shop/> */}
+   <ShopFilter/>
    
    
    

@@ -6,9 +6,8 @@ import Footer from '../Layout/Footer'
 function Contact() {
   return (
     <>
-    <Header/>
+    
     <ContactMain/>
-    <Footer/>
     </>
   )
 }

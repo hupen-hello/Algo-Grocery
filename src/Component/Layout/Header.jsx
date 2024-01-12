@@ -246,7 +246,7 @@ function Header() {
                                        </ul>
                                     </li>
                                     <li>
-                                       <a href='page-about.html'>About</a>
+                                       <a href="#">About</a>
                                     </li>
                                     <li>
                                        <a href='shop-grid-right.html'>Shop <FontAwesomeIcon icon={faAngleDown} /></a>
@@ -397,7 +397,7 @@ function Header() {
                            </div>
                         </div>
                         <div className="hotline d-none d-lg-flex">
-                           <img src={Hotline} alt="hotline" />
+                           <img src="https://nest-frontend.netlify.app/assets/imgs/theme/icons/icon-headphone.svg" alt="hotline" />
                            <p>1900 - 888<span>24/7 Support Center</span></p>
                         </div>
                         <div className="header-action-icon-2 d-block d-lg-none">
