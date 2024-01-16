@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
@@ -7,11 +7,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faRandom } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 
 
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { getallCategory } from '../Api/AllApi';
 
 function Shopproduct() {
 
@@ -34,16 +36,34 @@ function Shopproduct() {
         asNavFor: '.slider-main',
         focusOnSelect: true,
       };
+
+      const[CategoryData,setCategoryData]=useState([]);
+
+      useEffect(() =>{
+        const fetchData =async () =>{
+            try{
+                const result =await getallCategory();
+                setCategoryData(result?.[0]?.data);
+            } catch (error) {
+                console.error("Error fetching data:" , error);
+            }
+            
+        };
+fetchData();
+      },[]);
+      console.log(CategoryData,"CategoryData");
+
+
     return (
         <>
             <main className="main">
                 <div className="page-header breadcrumb-wrap">
                     <div className="container">
                         <div className="breadcrumb">
-                            <a href="index.htm" rel="nofollow">
+                            <Link to="/" rel="nofollow">
                             <FontAwesomeIcon icon={faHome} className=" mr-5" />
                                 Home
-                            </a>
+                            </Link>
                             <span /> <a href="shop-grid-right.html">Vegetables &amp; tubers</a>{" "}
                             <span /> Seeds of Change Organic
                         </div>
@@ -1163,46 +1183,21 @@ function Shopproduct() {
                                     <div className="sidebar-widget widget-category-2 mb-30">
                                         <h5 className="section-title style-1 mb-30">Category</h5>
                                         <ul>
-                                            <li>
+                                            {CategoryData && CategoryData.map((data,shop) =>{
+                                                return(
+                                                    <li>
                                                 <a href="shop-grid-right.html">
                                                     {" "}
-                                                    <img src="https://nest-frontend.netlify.app/assets/imgs/theme/icons/category-1.svg" alt="" />
-                                                    Milks &amp; Dairies
+                                                    <img src={data?.image} alt="" />
+                                                    {data?.title}
                                                 </a>
                                                 <span className="count">30</span>
                                             </li>
-                                            <li>
-                                                <a href="shop-grid-right.html">
-                                                    {" "}
-                                                    <img src="https://nest-frontend.netlify.app/assets/imgs/theme/icons/category-1.svg" alt="" />
-                                                    Clothing
-                                                </a>
-                                                <span className="count">35</span>
-                                            </li>
-                                            <li>
-                                                <a href="shop-grid-right.html">
-                                                    {" "}
-                                                    <img src="https://nest-frontend.netlify.app/assets/imgs/theme/icons/category-1.svg" alt="" />
-                                                    Pet Foods{" "}
-                                                </a>
-                                                <span className="count">42</span>
-                                            </li>
-                                            <li>
-                                                <a href="shop-grid-right.html">
-                                                    {" "}
-                                                    <img src="https://nest-frontend.netlify.app/assets/imgs/theme/icons/category-1.svg" alt="" />
-                                                    Baking material
-                                                </a>
-                                                <span className="count">68</span>
-                                            </li>
-                                            <li>
-                                                <a href="shop-grid-right.html">
-                                                    {" "}
-                                                    <img src="https://nest-frontend.netlify.app/assets/imgs/theme/icons/category-1.svg" alt="" />
-                                                    Fresh Fruit
-                                                </a>
-                                                <span className="count">87</span>
-                                            </li>
+
+                                                )
+                                            })}
+                                            
+                                           
                                         </ul>
                                     </div>
                                     {/* Fillter By Price */}

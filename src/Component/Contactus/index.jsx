@@ -1,15 +1,16 @@
 import React from 'react'
-import Homemain from './Homemain'
 import Topbar from '../Layout/Topbar'
 import Header from '../Layout/Header'
+import Cont from './Cont'
 import Footer from '../Layout/Footer'
 
-function Home() {
+function ContactUS() {
   return (
-    <div>
-      <Homemain />
-    </div>
+    <>
+    <Cont/>
+    
+    </>
   )
 }
 
-export default Home
+export default ContactUS

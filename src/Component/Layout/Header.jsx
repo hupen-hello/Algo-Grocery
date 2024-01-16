@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 // import '../Assets/css/main.css'
@@ -18,12 +19,11 @@ function Header() {
     <>
     <div>
     <header className="header-area header-style-1 header-style-5 header-height-2">
-               {/* <Topbar/> */}
                <div className="header-middle header-middle-ptb-1 d-none d-lg-block">
                   <div className="container">
                      <div className="header-wrap">
                         <div className="logo logo-width-1">
-                           <a href='index.htm'><img src={Logo} alt="logo" /></a>
+                           <Link to='/'><img src={Logo} alt="logo" /></Link>
                         </div>
                         <div className="header-right">
                            <div className="search-style-2">
@@ -67,49 +67,49 @@ function Header() {
                                     </form>
                                  </div>
                                  <div className="header-action-icon-2">
-                                    <a href='shop-compare.html'>
+                                    <Link to='shop-compare.html'>
                                        <img className="svgInject" alt="Nest" src={Compareimg} />
                                        <span className="pro-count blue">3</span>
-                                    </a>
-                                    <a href='shop-compare.html'><span className="lable ml-0">Compare</span></a>
+                                    </Link>
+                                    <Link to='shop-compare.html'><span className="lable ml-0">Compare</span></Link>
                                  </div>
                                  <div className="header-action-icon-2">
-                                    <a href='shop-wishlist.html'>
+                                    <Link to='shop-wishlist.html'>
                                        <img className="svgInject" alt="Nest" src={Whisimg} />
                                        <span className="pro-count blue">6</span>
-                                    </a>
-                                    <a href='shop-wishlist.html'><span className="lable">Wishlist</span></a>
+                                    </Link>
+                                    <Link to='shop-wishlist.html'><span className="lable">Wishlist</span></Link>
                                  </div>
                                  <div className="header-action-icon-2">
-                                    <a className='mini-cart-icon' href='shop-cart.html'>
+                                    <Link className='mini-cart-icon' to='shop-cart.html'>
                                        <img alt="Nest" src={cartimg} />
                                        <span className="pro-count blue">2</span>
-                                    </a>
-                                    <a href='shop-cart.html'><span className="lable">Cart</span></a>
+                                    </Link>
+                                    <Link to='shop-cart.html'><span className="lable">Cart</span></Link>
                                     <div className="cart-dropdown-wrap cart-dropdown-hm2">
                                        <ul>
                                           <li>
                                              <div className="shopping-cart-img">
-                                                <a href='shop-product-right.html'><img alt="Nest" src="assets/imgs/shop/thumbnail-3.jpg" /></a>
+                                                <Link to='shop-product-right.html'><img alt="Nest" src="assets/imgs/shop/thumbnail-3.jpg" /></Link>
                                              </div>
                                              <div className="shopping-cart-title">
-                                                <h4><a href='shop-product-right.html'>Daisy Casual Bag</a></h4>
+                                                <h4><Link to='shop-product-right.html'>Daisy Casual Bag</Link></h4>
                                                 <h4><span>1 × </span>$800.00</h4>
                                              </div>
                                              <div className="shopping-cart-delete">
-                                                <a href="#"><i className="fi-rs-cross-small"></i></a>
+                                                <Link to="#"><i className="fi-rs-cross-small"></i></Link>
                                              </div>
                                           </li>
                                           <li>
                                              <div className="shopping-cart-img">
-                                                <a href='shop-product-right.html'><img alt="Nest" src="assets/imgs/shop/thumbnail-2.jpg" /></a>
+                                                <Link to='shop-product-right.html'><img alt="Nest" src="assets/imgs/shop/thumbnail-2.jpg" /></Link>
                                              </div>
                                              <div className="shopping-cart-title">
-                                                <h4><a href='shop-product-right.html'>Corduroy Shirts</a></h4>
+                                                <h4><Link to='shop-product-right.html'>Corduroy Shirts</Link></h4>
                                                 <h4><span>1 × </span>$3200.00</h4>
                                              </div>
                                              <div className="shopping-cart-delete">
-                                                <a href="#"><i className="fi-rs-cross-small"></i></a>
+                                                <Link to="#"><i className="fi-rs-cross-small"></i></Link>
                                              </div>
                                           </li>
                                        </ul>
@@ -118,36 +118,36 @@ function Header() {
                                              <h4>Total <span>$4000.00</span></h4>
                                           </div>
                                           <div className="shopping-cart-button">
-                                             <a className='outline' href='shop-cart.html'>View cart</a>
-                                             <a href='shop-checkout.html'>Checkout</a>
+                                             <Link className='outline' to='shop-cart.html'>View cart</Link>
+                                             <Link to='shop-checkout.html'>Checkout</Link>
                                           </div>
                                        </div>
                                     </div>
                                  </div>
                                  <div className="header-action-icon-2">
-                                    <a href='page-account.html'>
+                                    <Link to='page-account.html'>
                                        <img className="svgInject" alt="Nest" src={Accimg} />
-                                    </a>
-                                    <a href='page-account.html'><span className="lable ml-0">Account</span></a>
+                                    </Link>
+                                    <Link to='page-account.html'><span className="lable ml-0">Account</span></Link>
                                     <div className="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                                        <ul>
                                           <li>
-                                             <a href='page-account.html'><i className="fi fi-rs-user mr-10"></i>My Account</a>
+                                             <Link to='page-account.html'><i className="fi fi-rs-user mr-10"></i>My Account</Link>
                                           </li>
                                           <li>
-                                             <a href='page-account.html'><i className="fi fi-rs-location-alt mr-10"></i>Order Tracking</a>
+                                             <Link to='page-account.html'><i className="fi fi-rs-location-alt mr-10"></i>Order Tracking</Link>
                                           </li>
                                           <li>
-                                             <a href='page-account.html'><i className="fi fi-rs-label mr-10"></i>My Voucher</a>
+                                             <Link to='page-account.html'><i className="fi fi-rs-label mr-10"></i>My Voucher</Link>
                                           </li>
                                           <li>
-                                             <a href='shop-wishlist.html'><i className="fi fi-rs-heart mr-10"></i>My Wishlist</a>
+                                             <Link to='shop-wishlist.html'><i className="fi fi-rs-heart mr-10"></i>My Wishlist</Link>
                                           </li>
                                           <li>
-                                             <a href='page-account.html'><i className="fi fi-rs-settings-sliders mr-10"></i>Setting</a>
+                                             <Link to='page-account.html'><i className="fi fi-rs-settings-sliders mr-10"></i>Setting</Link>
                                           </li>
                                           <li>
-                                             <a href='page-login.html'><i className="fi fi-rs-sign-out mr-10"></i>Sign out</a>
+                                             <Link to='page-login.html'><i className="fi fi-rs-sign-out mr-10"></i>Sign out</Link>
                                           </li>
                                        </ul>
                                     </div>
@@ -162,48 +162,48 @@ function Header() {
                   <div className="container">
                      <div className="header-wrap header-space-between position-relative">
                         <div className="logo logo-width-1 d-block d-lg-none">
-                           <a href='index.htm'><img src={Logo} alt="logo" /></a>
+                           <Link to='index.htm'><img src={Logo} alt="logo" /></Link>
                         </div>
                         <div className="header-nav d-none d-lg-flex">
                            <div className="main-categori-wrap d-none d-lg-block">
-                              <a className="categories-button-active" href="#">
+                              <Link className="categories-button-active" to="#">
                                  <span className="fi-rs-apps"></span> <span className="et">Trending</span> Categories
                                  <FontAwesomeIcon icon={faAngleDown} />
-                              </a>
+                              </Link>
                               <div className="categories-dropdown-wrap categories-dropdown-active-large font-heading">
                                  <div className="d-flex categori-dropdown-inner">
                                     <ul>
                                        <li>
-                                          <a href='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-1.svg" alt="" />Milks and Dairies</a>
+                                          <Link to='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-1.svg" alt="" />Milks and Dairies</Link>
                                        </li>
                                        <li>
-                                          <a href='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-2.svg" alt="" />Clothing & beauty</a>
+                                          <Link to='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-2.svg" alt="" />Clothing & beauty</Link>
                                        </li>
                                        <li>
-                                          <a href='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-3.svg" alt="" />Pet Foods & Toy</a>
+                                          <Link to='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-3.svg" alt="" />Pet Foods & Toy</Link>
                                        </li>
                                        <li>
-                                          <a href='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-4.svg" alt="" />Baking material</a>
+                                          <Link to='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-4.svg" alt="" />Baking material</Link>
                                        </li>
                                        <li>
-                                          <a href='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-5.svg" alt="" />Fresh Fruit</a>
+                                          <Link to='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-5.svg" alt="" />Fresh Fruit</Link>
                                        </li>
                                     </ul>
                                     <ul className="end">
                                        <li>
-                                          <a href='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-6.svg" alt="" />Wines & Drinks</a>
+                                          <Link to='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-6.svg" alt="" />Wines & Drinks</Link>
                                        </li>
                                        <li>
-                                          <a href='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-7.svg" alt="" />Fresh Seafood</a>
+                                          <Link to='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-7.svg" alt="" />Fresh Seafood</Link>
                                        </li>
                                        <li>
-                                          <a href='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-8.svg" alt="" />Fast food</a>
+                                          <Link to='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-8.svg" alt="" />Fast food</Link>
                                        </li>
                                        <li>
-                                          <a href='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-9.svg" alt="" />Vegetables</a>
+                                          <Link to='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-9.svg" alt="" />Vegetables</Link>
                                        </li>
                                        <li>
-                                          <a href='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-10.svg" alt="" />Bread and Juice</a>
+                                          <Link to='shop-grid-right.html'> <img src="assets/imgs/theme/icons/category-10.svg" alt="" />Bread and Juice</Link>
                                        </li>
                                     </ul>
                                  </div>
@@ -211,18 +211,18 @@ function Header() {
                                     <div className="d-flex categori-dropdown-inner">
                                        <ul>
                                           <li>
-                                             <a href='shop-grid-right.html'> <img src="assets/imgs/theme/icons/icon-1.svg" alt="" />Milks and Dairies</a>
+                                             <Link to='shop-grid-right.html'> <img src="assets/imgs/theme/icons/icon-1.svg" alt="" />Milks and Dairies</Link>
                                           </li>
                                           <li>
-                                             <a href='shop-grid-right.html'> <img src="assets/imgs/theme/icons/icon-2.svg" alt="" />Clothing & beauty</a>
+                                             <Link to='shop-grid-right.html'> <img src="assets/imgs/theme/icons/icon-2.svg" alt="" />Clothing & beauty</Link>
                                           </li>
                                        </ul>
                                        <ul className="end">
                                           <li>
-                                             <a href='shop-grid-right.html'> <img src="assets/imgs/theme/icons/icon-3.svg" alt="" />Wines & Drinks</a>
+                                             <Link to='shop-grid-right.html'> <img src="assets/imgs/theme/icons/icon-3.svg" alt="" />Wines & Drinks</Link>
                                           </li>
                                           <li>
-                                             <a href='shop-grid-right.html'> <img src="assets/imgs/theme/icons/icon-4.svg" alt="" />Fresh Seafood</a>
+                                             <Link to='shop-grid-right.html'> <img src="assets/imgs/theme/icons/icon-4.svg" alt="" />Fresh Seafood</Link>
                                           </li>
                                        </ul>
                                     </div>
@@ -233,106 +233,72 @@ function Header() {
                            <div className="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
                               <nav>
                                  <ul>
-                                    <li className="hot-deals"><img src={Hotimg} alt="hot deals" /><a href='shop-grid-right.html'>Deals</a></li>
+                                    <li className="hot-deals"><img src={Hotimg} alt="hot deals" /><Link to='shop-grid-right.html'>Deals</Link></li>
                                     <li>
-                                       <a className='active' href='index.htm'>Home <FontAwesomeIcon icon={faAngleDown} /></a>
-                                       <ul className="sub-menu">
-                                          <li><a href='index.htm'>Home 1</a></li>
-                                          <li><a href='index-2.html'>Home 2</a></li>
-                                          <li><a href='index-3.html'>Home 3</a></li>
-                                          <li><a href='index-4.html'>Home 4</a></li>
-                                          <li><a href='index-5.html'>Home 5</a></li>
-                                          <li><a href='index-6.html'>Home 6</a></li>
-                                       </ul>
+                                       <Link className='active' to='/'>Home </Link>
+                                       
                                     </li>
                                     <li>
-                                       <a href="#">About</a>
+                                       <Link to="/Contact">About</Link>
                                     </li>
                                     <li>
-                                       <a href='shop-grid-right.html'>Shop <FontAwesomeIcon icon={faAngleDown} /></a>
+                                       <Link to='/Shop'>Shop <FontAwesomeIcon icon={faAngleDown} /></Link>
                                        <ul className="sub-menu">
-                                          <li><a href='shop-grid-right.html'>Shop Grid – Right Sidebar</a></li>
-                                          <li><a href='shop-grid-left.html'>Shop Grid – Left Sidebar</a></li>
-                                          <li><a href='shop-list-right.html'>Shop List – Right Sidebar</a></li>
-                                          <li><a href='shop-list-left.html'>Shop List – Left Sidebar</a></li>
-                                          <li><a href='shop-fullwidth.html'>Shop - Wide</a></li>
+                                          
                                           <li>
-                                             <a href="#">Single Product <i className="fi-rs-angle-right"></i></a>
-                                             <ul className="level-menu">
-                                                <li><a href='shop-product-right.html'>Product – Right Sidebar</a></li>
-                                                <li><a href='shop-product-left.html'>Product – Left Sidebar</a></li>
-                                                <li><a href='shop-product-full.html'>Product – No sidebar</a></li>
-                                                <li><a href='shop-product-vendor.html'>Product – Vendor Info</a></li>
-                                             </ul>
+                                             <Link to="/Shop/Shopproduct">Single Product <i className="fi-rs-angle-right"></i></Link>
+                                             
                                           </li>
-                                          <li><a href='shop-filter.html'>Shop – Filter</a></li>
-                                          <li><a href='shop-wishlist.html'>Shop – Wishlist</a></li>
-                                          <li><a href='shop-cart.html'>Shop – Cart</a></li>
-                                          <li><a href='shop-checkout.html'>Shop – Checkout</a></li>
-                                          <li><a href='shop-compare.html'>Shop – Compare</a></li>
+                                          <li><Link to="/Shop/ShopFilter">Shop – Filter</Link></li>
+                                          <li><Link to="/Shop/Shopwhislist">Shop – Wishlist</Link></li>
+                                          <li><Link to="/Shop/ShopCart">Shop – Cart</Link></li>
+                                          <li><Link to="/Shop/ShopCheckout">Shop – Checkout</Link></li>
                                           <li>
-                                             <a href="#">Shop Invoice<i className="fi-rs-angle-right"></i></a>
-                                             <ul className="level-menu">
-                                                <li><a href='shop-invoice-1.html'>Shop Invoice 1</a></li>
-                                                <li><a href='shop-invoice-2.html'>Shop Invoice 2</a></li>
-                                                <li><a href='shop-invoice-3.html'>Shop Invoice 3</a></li>
-                                                <li><a href='shop-invoice-4.html'>Shop Invoice 4</a></li>
-                                                <li><a href='shop-invoice-5.html'>Shop Invoice 5</a></li>
-                                                <li><a href='shop-invoice-6.html'>Shop Invoice 6</a></li>
-                                             </ul>
+                                             <Link to="/Shop/Invoice">Shop Invoice<i className="fi-rs-angle-right"></i></Link>
+                                             
                                           </li>
                                        </ul>
                                     </li>
-                                    <li>
-                                       <a href="#">Vendors <FontAwesomeIcon icon={faAngleDown} /></a>
-                                       <ul className="sub-menu">
-                                          <li><a href='vendors-grid.html'>Vendors Grid</a></li>
-                                          <li><a href='vendors-list.html'>Vendors List</a></li>
-                                          <li><a href='vendor-details-1.html'>Vendor Details 01</a></li>
-                                          <li><a href='vendor-details-2.html'>Vendor Details 02</a></li>
-                                          <li><a href='vendor-dashboard.html'>Vendor Dashboard</a></li>
-                                          <li><a href='vendor-guide.html'>Vendor Guide</a></li>
-                                       </ul>
-                                    </li>
+                                   
                                     <li className="position-static">
-                                       <a href="#">Mega menu <FontAwesomeIcon icon={faAngleDown} /></a>
+                                       <Link to="#">Mega menu <FontAwesomeIcon icon={faAngleDown} /></Link>
                                        <ul className="mega-menu">
                                           <li className="sub-mega-menu sub-mega-menu-width-22">
-                                             <a className="menu-title" href="#">Fruit & Vegetables</a>
+                                             <Link className="menu-title" to="#">Fruit & Vegetables</Link>
                                              <ul>
-                                                <li><a href='shop-product-right.html'>Meat & Poultry</a></li>
-                                                <li><a href='shop-product-right.html'>Fresh Vegetables</a></li>
-                                                <li><a href='shop-product-right.html'>Herbs & Seasonings</a></li>
-                                                <li><a href='shop-product-right.html'>Cuts & Sprouts</a></li>
-                                                <li><a href='shop-product-right.html'>Exotic Fruits & Veggies</a></li>
-                                                <li><a href='shop-product-right.html'>Packaged Produce</a></li>
+                                                <li><Link to='shop-product-right.html'>Meat & Poultry</Link></li>
+                                                <li><Link to='shop-product-right.html'>Fresh Vegetables</Link></li>
+                                                <li><Link to='shop-product-right.html'>Herbs & Seasonings</Link></li>
+                                                <li><Link to='shop-product-right.html'>Cuts & Sprouts</Link></li>
+                                                <li><Link to='shop-product-right.html'>Exotic Fruits & Veggies</Link></li>
+                                                <li><Link to='shop-product-right.html'>Packaged Produce</Link></li>
                                              </ul>
                                           </li>
                                           <li className="sub-mega-menu sub-mega-menu-width-22">
-                                             <a className="menu-title" href="#">Breakfast & Dairy</a>
+                                             <Link className="menu-title" to="#">Breakfast & Dairy</Link>
                                              <ul>
-                                                <li><a href='shop-product-right.html'>Milk & Flavoured Milk</a></li>
-                                                <li><a href='shop-product-right.html'>Butter and Margarine</a></li>
-                                                <li><a href='shop-product-right.html'>Eggs Substitutes</a></li>
-                                                <li><a href='shop-product-right.html'>Marmalades</a></li>
-                                                <li><a href='shop-product-right.html'>Sour Cream</a></li>
-                                                <li><a href='shop-product-right.html'>Cheese</a></li>
+                                                <li><Link to='shop-product-right.html'>Milk & Flavoured Milk</Link></li>
+                                                <li><Link to='shop-product-right.html'>Butter and Margarine</Link></li>
+                                                <li><Link to='shop-product-right.html'>Eggs Substitutes</Link></li>
+                                                <li><Link to='shop-product-right.html'>Marmalades</Link></li>
+                                                <li><Link to='shop-product-right.html'>Sour Cream</Link></li>
+                                                <li><Link to='shop-product-right.html'>Cheese</Link></li>
                                              </ul>
                                           </li>
                                           <li className="sub-mega-menu sub-mega-menu-width-22">
-                                             <a className="menu-title" href="#">Meat & Seafood</a>
+                                             <Link className="menu-title" to="#">Meat & Seafood</Link>
                                              <ul>
-                                                <li><a href='shop-product-right.html'>Breakfast Sausage</a></li>
-                                                <li><a href='shop-product-right.html'>Dinner Sausage</a></li>
-                                                <li><a href='shop-product-right.html'>Chicken</a></li>
-                                                <li><a href='shop-product-right.html'>Sliced Deli Meat</a></li>
-                                                <li><a href='shop-product-right.html'>Wild Caught Fillets</a></li>
-                                                <li><a href='shop-product-right.html'>Crab and Shellfish</a></li>
+                                                <li><Link to='shop-product-right.html'>Breakfast Sausage</Link></li>
+                                                <li><Link to='shop-product-right.html'>Dinner Sausage</Link></li>
+                                                <li><Link to='shop-product-right.html'>Chicken</Link></li>
+                                                <li><Link to='shop-product-right.html'>Sliced Deli Meat</Link></li>
+                                                <li><Link to='shop-product-right.html'>Wild Caught Fillets</Link></li>
+                                                <li><Link to='shop-product-right.html'>Crab and Shellfish</Link></li>
                                              </ul>
                                           </li>
                                           <li className="sub-mega-menu sub-mega-menu-width-34">
                                              <div className="menu-banner-wrap">
-                                                <a href='shop-product-right.html'><img src={Dontimg} alt="Nest" /></a>
+                                                <Link to='shop-product-right.html'><img src={Dontimg} alt="Nest" /></Link>
                                                 <div className="menu-banner-content">
                                                    <h4>Hot deals</h4>
                                                    <h3>
@@ -343,7 +309,7 @@ function Header() {
                                                       <span className="new-price text-success">Save to 50%</span>
                                                    </div>
                                                    <div className="menu-banner-btn">
-                                                      <a href='shop-product-right.html'>Shop now</a>
+                                                      <Link to='shop-product-right.html'>Shop now</Link>
                                                    </div>
                                                 </div>
                                                 <div className="menu-banner-discount">
@@ -357,40 +323,27 @@ function Header() {
                                        </ul>
                                     </li>
                                     <li>
-                                       <a href='blog-category-grid.html'>Blog <FontAwesomeIcon icon={faAngleDown} /></a>
+                                       <Link to="/Blog">Blog </Link>
+                                       
+                                    </li>
+                                    <li>
+                                       <Link to="/Pages">Pages <FontAwesomeIcon icon={faAngleDown} /></Link>
                                        <ul className="sub-menu">
-                                          <li><a href='blog-category-grid.html'>Blog Category Grid</a></li>
-                                          <li><a href='blog-category-list.html'>Blog Category List</a></li>
-                                          <li><a href='blog-category-big.html'>Blog Category Big</a></li>
-                                          <li><a href='blog-category-fullwidth.html'>Blog Category Wide</a></li>
-                                          <li>
-                                             <a href="#">Single Post <i className="fi-rs-angle-right"></i></a>
-                                             <ul className="level-menu level-menu-modify">
-                                                <li><a href='blog-post-left.html'>Left Sidebar</a></li>
-                                                <li><a href='blog-post-right.html'>Right Sidebar</a></li>
-                                                <li><a href='blog-post-fullwidth.html'>No Sidebar</a></li>
-                                             </ul>
-                                          </li>
+                                          <li><Link to="/Pages/Aboutus">About Us</Link></li>
+                                          <li><Link to="/Pages/ContactUS">Contact</Link></li>
+                                          <li><Link to="/Pages/MyAccount">My Account</Link></li>
+                                          <li><Link to="/Pages/Login">Login</Link></li>
+                                          <li><Link to="/Pages/Register">Register</Link></li>
+                                          <li><Link to="/Pages/Forgetpassword">Forgot password</Link></li>
+                                          <li><Link to="/Pages/Resetpassword">Reset password</Link></li>
+                                          <li><Link to="/Pages/Purchasedguid">Purchase Guide</Link></li>
+                                          <li><Link to="/Pages/PrivacyPolicy">Privacy Policy</Link></li>
+                                          <li><Link to="/Pages/TermsAndCondition">Terms of Service</Link></li>
+                                          <li><Link to="/Pages/Notfound">404 Page</Link></li>
                                        </ul>
                                     </li>
                                     <li>
-                                       <a href="#">Pages <FontAwesomeIcon icon={faAngleDown} /></a>
-                                       <ul className="sub-menu">
-                                          <li><a href='page-about.html'>About Us</a></li>
-                                          <li><a href='page-contact.html'>Contact</a></li>
-                                          <li><a href='page-account.html'>My Account</a></li>
-                                          <li><a href='page-login.html'>Login</a></li>
-                                          <li><a href='page-register.html'>Register</a></li>
-                                          <li><a href='page-forgot-password.html'>Forgot password</a></li>
-                                          <li><a href='page-reset-password.html'>Reset password</a></li>
-                                          <li><a href='page-purchase-guide.html'>Purchase Guide</a></li>
-                                          <li><a href='page-privacy-policy.html'>Privacy Policy</a></li>
-                                          <li><a href='page-terms.html'>Terms of Service</a></li>
-                                          <li><a href='page-404.html'>404 Page</a></li>
-                                       </ul>
-                                    </li>
-                                    <li>
-                                       <a href='page-contact.html'>Contact</a>
+                                       <Link to="/Contactus">Contact</Link>
                                     </li>
                                  </ul>
                               </nav>
@@ -410,40 +363,40 @@ function Header() {
                         <div className="header-action-right d-block d-lg-none">
                            <div className="header-action-2">
                               <div className="header-action-icon-2">
-                                 <a href='shop-wishlist.html'>
+                                 <Link to='shop-wishlist.html'>
                                     <img alt="Nest" src="assets/imgs/theme/icons/icon-heart.svg" />
                                     <span className="pro-count white">4</span>
-                                 </a>
+                                 </Link>
                               </div>
                               <div className="header-action-icon-2">
-                                 <a className="mini-cart-icon" href="#">
+                                 <Link className="mini-cart-icon" to="#">
                                     <img alt="Nest" src="assets/imgs/theme/icons/icon-cart.svg" />
                                     <span className="pro-count white">2</span>
-                                 </a>
+                                 </Link>
                                  <div className="cart-dropdown-wrap cart-dropdown-hm2">
                                     <ul>
                                        <li>
                                           <div className="shopping-cart-img">
-                                             <a href='shop-product-right.html'><img alt="Nest" src="assets/imgs/shop/thumbnail-3.jpg" /></a>
+                                             <Link to='shop-product-right.html'><img alt="Nest" src="assets/imgs/shop/thumbnail-3.jpg" /></Link>
                                           </div>
                                           <div className="shopping-cart-title">
-                                             <h4><a href='shop-product-right.html'>Plain Striola Shirts</a></h4>
+                                             <h4><Link to='shop-product-right.html'>Plain Striola Shirts</Link></h4>
                                              <h3><span>1 × </span>$800.00</h3>
                                           </div>
                                           <div className="shopping-cart-delete">
-                                             <a href="#"><i className="fi-rs-cross-small"></i></a>
+                                             <Link to="#"><i className="fi-rs-cross-small"></i></Link>
                                           </div>
                                        </li>
                                        <li>
                                           <div className="shopping-cart-img">
-                                             <a href='shop-product-right.html'><img alt="Nest" src="assets/imgs/shop/thumbnail-4.jpg" /></a>
+                                             <Link to='shop-product-right.html'><img alt="Nest" src="assets/imgs/shop/thumbnail-4.jpg" /></Link>
                                           </div>
                                           <div className="shopping-cart-title">
-                                             <h4><a href='shop-product-right.html'>Macbook Pro 2022</a></h4>
+                                             <h4><Link to='shop-product-right.html'>Macbook Pro 2022</Link></h4>
                                              <h3><span>1 × </span>$3500.00</h3>
                                           </div>
                                           <div className="shopping-cart-delete">
-                                             <a href="#"><i className="fi-rs-cross-small"></i></a>
+                                             <Link to="#"><i className="fi-rs-cross-small"></i></Link>
                                           </div>
                                        </li>
                                     </ul>
@@ -452,8 +405,8 @@ function Header() {
                                           <h4>Total <span>$383.00</span></h4>
                                        </div>
                                        <div className="shopping-cart-button">
-                                          <a href='shop-cart.html'>View cart</a>
-                                          <a href='shop-checkout.html'>Checkout</a>
+                                          <Link to='shop-cart.html'>View cart</Link>
+                                          <Link to='shop-checkout.html'>Checkout</Link>
                                        </div>
                                     </div>
                                  </div>
@@ -468,9 +421,9 @@ function Header() {
                <div className="mobile-header-wrapper-inner">
                   <div className="mobile-header-top">
                      <div className="mobile-header-logo">
-                        <a href="index.htm">
+                        <Link to="index.htm">
                            <img src="assets/imgs/theme/logo.svg" alt="logo" />
-                        </a>
+                        </Link>
                      </div>
                      <div className="mobile-menu-close close-style-wrap close-style-position-inherit">
                         <button className="close-style search-close">
@@ -493,273 +446,273 @@ function Header() {
                         <nav>
                            <ul className="mobile-menu font-heading">
                               <li className="menu-item-has-children">
-                                 <a href="index.htm">Home</a>
+                                 <Link to="index.htm">Home</Link>
                                  <ul className="dropdown">
                                     <li>
-                                       <a href="index.htm">Home 1</a>
+                                       <Link to="index.htm">Home 1</Link>
                                     </li>
                                     <li>
-                                       <a href="index-2.html">Home 2</a>
+                                       <Link to="index-2.html">Home 2</Link>
                                     </li>
                                     <li>
-                                       <a href="index-3.html">Home 3</a>
+                                       <Link to="index-3.html">Home 3</Link>
                                     </li>
                                     <li>
-                                       <a href="index-4.html">Home 4</a>
+                                       <Link to="index-4.html">Home 4</Link>
                                     </li>
                                     <li>
-                                       <a href="index-5.html">Home 5</a>
+                                       <Link to="index-5.html">Home 5</Link>
                                     </li>
                                     <li>
-                                       <a href="index-6.html">Home 6</a>
+                                       <Link to="index-6.html">Home 6</Link>
                                     </li>
                                  </ul>
                               </li>
                               <li className="menu-item-has-children">
-                                 <a href="shop-grid-right.html">shop</a>
+                                 <Link to="shop-grid-right.html">shop</Link>
                                  <ul className="dropdown">
                                     <li>
-                                       <a href="shop-grid-right.html">Shop Grid – Right Sidebar</a>
+                                       <Link to="shop-grid-right.html">Shop Grid – Right Sidebar</Link>
                                     </li>
                                     <li>
-                                       <a href="shop-grid-left.html">Shop Grid – Left Sidebar</a>
+                                       <Link to="shop-grid-left.html">Shop Grid – Left Sidebar</Link>
                                     </li>
                                     <li>
-                                       <a href="shop-list-right.html">Shop List – Right Sidebar</a>
+                                       <Link to="shop-list-right.html">Shop List – Right Sidebar</Link>
                                     </li>
                                     <li>
-                                       <a href="shop-list-left.html">Shop List – Left Sidebar</a>
+                                       <Link to="shop-list-left.html">Shop List – Left Sidebar</Link>
                                     </li>
                                     <li>
-                                       <a href="shop-fullwidth.html">Shop - Wide</a>
+                                       <Link to="shop-fullwidth.html">Shop - Wide</Link>
                                     </li>
                                     <li className="menu-item-has-children">
-                                       <a href="#">Single Product</a>
+                                       <Link to="#">Single Product</Link>
                                        <ul className="dropdown">
                                           <li>
-                                             <a href="shop-product-right.html">
+                                             <Link to="shop-product-right.html">
                                                 Product – Right Sidebar
-                                             </a>
+                                             </Link>
                                           </li>
                                           <li>
-                                             <a href="shop-product-left.html">
+                                             <Link to="shop-product-left.html">
                                                 Product – Left Sidebar
-                                             </a>
+                                             </Link>
                                           </li>
                                           <li>
-                                             <a href="shop-product-full.html">Product – No sidebar</a>
+                                             <Link to="shop-product-full.html">Product – No sidebar</Link>
                                           </li>
                                           <li>
-                                             <a href="shop-product-vendor.html">
+                                             <Link to="shop-product-vendor.html">
                                                 Product – Vendor Infor
-                                             </a>
+                                             </Link>
                                           </li>
                                        </ul>
                                     </li>
                                     <li>
-                                       <a href="shop-filter.html">Shop – Filter</a>
+                                       <Link to="shop-filter.html">Shop – Filter</Link>
                                     </li>
                                     <li>
-                                       <a href="shop-wishlist.html">Shop – Wishlist</a>
+                                       <Link to="shop-wishlist.html">Shop – Wishlist</Link>
                                     </li>
                                     <li>
-                                       <a href="shop-cart.html">Shop – Cart</a>
+                                       <Link to="shop-cart.html">Shop – Cart</Link>
                                     </li>
                                     <li>
-                                       <a href="shop-checkout.html">Shop – Checkout</a>
+                                       <Link to="shop-checkout.html">Shop – Checkout</Link>
                                     </li>
                                     <li>
-                                       <a href="shop-compare.html">Shop – Compare</a>
+                                       <Link to="shop-compare.html">Shop – Compare</Link>
                                     </li>
                                     <li className="menu-item-has-children">
-                                       <a href="#">Shop Invoice</a>
+                                       <Link to="#">Shop Invoice</Link>
                                        <ul className="dropdown">
                                           <li>
-                                             <a href="shop-invoice-1.html">Shop Invoice 1</a>
+                                             <Link to="shop-invoice-1.html">Shop Invoice 1</Link>
                                           </li>
                                           <li>
-                                             <a href="shop-invoice-2.html">Shop Invoice 2</a>
+                                             <Link to="shop-invoice-2.html">Shop Invoice 2</Link>
                                           </li>
                                           <li>
-                                             <a href="shop-invoice-3.html">Shop Invoice 3</a>
+                                             <Link to="shop-invoice-3.html">Shop Invoice 3</Link>
                                           </li>
                                           <li>
-                                             <a href="shop-invoice-4.html">Shop Invoice 4</a>
+                                             <Link to="shop-invoice-4.html">Shop Invoice 4</Link>
                                           </li>
                                           <li>
-                                             <a href="shop-invoice-5.html">Shop Invoice 5</a>
+                                             <Link to="shop-invoice-5.html">Shop Invoice 5</Link>
                                           </li>
                                           <li>
-                                             <a href="shop-invoice-6.html">Shop Invoice 6</a>
+                                             <Link to="shop-invoice-6.html">Shop Invoice 6</Link>
                                           </li>
                                        </ul>
                                     </li>
                                  </ul>
                               </li>
                               <li className="menu-item-has-children">
-                                 <a href="#">Vendors</a>
+                                 <Link to="#">Vendors</Link>
                                  <ul className="dropdown">
                                     <li>
-                                       <a href="vendors-grid.html">Vendors Grid</a>
+                                       <Link to="vendors-grid.html">Vendors Grid</Link>
                                     </li>
                                     <li>
-                                       <a href="vendors-list.html">Vendors List</a>
+                                       <Link to="vendors-list.html">Vendors List</Link>
                                     </li>
                                     <li>
-                                       <a href="vendor-details-1.html">Vendor Details 01</a>
+                                       <Link to="vendor-details-1.html">Vendor Details 01</Link>
                                     </li>
                                     <li>
-                                       <a href="vendor-details-2.html">Vendor Details 02</a>
+                                       <Link to="vendor-details-2.html">Vendor Details 02</Link>
                                     </li>
                                     <li>
-                                       <a href="vendor-dashboard.html">Vendor Dashboard</a>
+                                       <Link to="vendor-dashboard.html">Vendor Dashboard</Link>
                                     </li>
                                     <li>
-                                       <a href="vendor-guide.html">Vendor Guide</a>
+                                       <Link to="vendor-guide.html">Vendor Guide</Link>
                                     </li>
                                  </ul>
                               </li>
                               <li className="menu-item-has-children">
-                                 <a href="#">Mega menu</a>
+                                 <Link to="#">Mega menu</Link>
                                  <ul className="dropdown">
                                     <li className="menu-item-has-children">
-                                       <a href="#">Women's Fashion</a>
+                                       <Link to="#">Women's Fashion</Link>
                                        <ul className="dropdown">
                                           <li>
-                                             <a href="shop-product-right.html">Dresses</a>
+                                             <Link to="shop-product-right.html">Dresses</Link>
                                           </li>
                                           <li>
-                                             <a href="shop-product-right.html">Blouses &amp; Shirts</a>
+                                             <Link to="shop-product-right.html">Blouses &amp; Shirts</Link>
                                           </li>
                                           <li>
-                                             <a href="shop-product-right.html">
+                                             <Link to="shop-product-right.html">
                                                 Hoodies &amp; Sweatshirts
-                                             </a>
+                                             </Link>
                                           </li>
                                           <li>
-                                             <a href="shop-product-right.html">Women's Sets</a>
-                                          </li>
-                                       </ul>
-                                    </li>
-                                    <li className="menu-item-has-children">
-                                       <a href="#">Men's Fashion</a>
-                                       <ul className="dropdown">
-                                          <li>
-                                             <a href="shop-product-right.html">Jackets</a>
-                                          </li>
-                                          <li>
-                                             <a href="shop-product-right.html">Casual Faux Leather</a>
-                                          </li>
-                                          <li>
-                                             <a href="shop-product-right.html">Genuine Leather</a>
+                                             <Link to="shop-product-right.html">Women's Sets</Link>
                                           </li>
                                        </ul>
                                     </li>
                                     <li className="menu-item-has-children">
-                                       <a href="#">Technology</a>
+                                       <Link to="#">Men's Fashion</Link>
                                        <ul className="dropdown">
                                           <li>
-                                             <a href="shop-product-right.html">Gaming Laptops</a>
+                                             <Link to="shop-product-right.html">Jackets</Link>
                                           </li>
                                           <li>
-                                             <a href="shop-product-right.html">Ultraslim Laptops</a>
+                                             <Link to="shop-product-right.html">Casual Faux Leather</Link>
                                           </li>
                                           <li>
-                                             <a href="shop-product-right.html">Tablets</a>
+                                             <Link to="shop-product-right.html">Genuine Leather</Link>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                    <li className="menu-item-has-children">
+                                       <Link to="#">Technology</Link>
+                                       <ul className="dropdown">
+                                          <li>
+                                             <Link to="shop-product-right.html">Gaming Laptops</Link>
                                           </li>
                                           <li>
-                                             <a href="shop-product-right.html">Laptop Accessories</a>
+                                             <Link to="shop-product-right.html">Ultraslim Laptops</Link>
                                           </li>
                                           <li>
-                                             <a href="shop-product-right.html">Tablet Accessories</a>
+                                             <Link to="shop-product-right.html">Tablets</Link>
+                                          </li>
+                                          <li>
+                                             <Link to="shop-product-right.html">Laptop Accessories</Link>
+                                          </li>
+                                          <li>
+                                             <Link to="shop-product-right.html">Tablet Accessories</Link>
                                           </li>
                                        </ul>
                                     </li>
                                  </ul>
                               </li>
                               <li className="menu-item-has-children">
-                                 <a href="blog-category-fullwidth.html">Blog</a>
+                                 <Link to="blog-category-fullwidth.html">Blog</Link>
                                  <ul className="dropdown">
                                     <li>
-                                       <a href="blog-category-grid.html">Blog Category Grid</a>
+                                       <Link to="blog-category-grid.html">Blog Category Grid</Link>
                                     </li>
                                     <li>
-                                       <a href="blog-category-list.html">Blog Category List</a>
+                                       <Link to="blog-category-list.html">Blog Category List</Link>
                                     </li>
                                     <li>
-                                       <a href="blog-category-big.html">Blog Category Big</a>
+                                       <Link to="blog-category-big.html">Blog Category Big</Link>
                                     </li>
                                     <li>
-                                       <a href="blog-category-fullwidth.html">Blog Category Wide</a>
+                                       <Link to="blog-category-fullwidth.html">Blog Category Wide</Link>
                                     </li>
                                     <li className="menu-item-has-children">
-                                       <a href="#">Single Product Layout</a>
+                                       <Link to="#">Single Product Layout</Link>
                                        <ul className="dropdown">
                                           <li>
-                                             <a href="blog-post-left.html">Left Sidebar</a>
+                                             <Link to="blog-post-left.html">Left Sidebar</Link>
                                           </li>
                                           <li>
-                                             <a href="blog-post-right.html">Right Sidebar</a>
+                                             <Link to="blog-post-right.html">Right Sidebar</Link>
                                           </li>
                                           <li>
-                                             <a href="blog-post-fullwidth.html">No Sidebar</a>
+                                             <Link to="blog-post-fullwidth.html">No Sidebar</Link>
                                           </li>
                                        </ul>
                                     </li>
                                  </ul>
                               </li>
                               <li className="menu-item-has-children">
-                                 <a href="#">Pages</a>
+                                 <Link to="#">Pages</Link>
                                  <ul className="dropdown">
                                     <li>
-                                       <a href="page-about.html">About Us</a>
+                                       <Link to="page-about.html">About Us</Link>
                                     </li>
                                     <li>
-                                       <a href="page-contact.html">Contact</a>
+                                       <Link to="page-contact.html">Contact</Link>
                                     </li>
                                     <li>
-                                       <a href="page-account.html">My Account</a>
+                                       <Link to="page-account.html">My Account</Link>
                                     </li>
                                     <li>
-                                       <a href="page-login.html">Login</a>
+                                       <Link to="page-login.html">Login</Link>
                                     </li>
                                     <li>
-                                       <a href="page-register.html">Register</a>
+                                       <Link to="page-register.html">Register</Link>
                                     </li>
                                     <li>
-                                       <a href="page-forgot-password.html">Forgot password</a>
+                                       <Link to="page-forgot-password.html">Forgot password</Link>
                                     </li>
                                     <li>
-                                       <a href="page-reset-password.html">Reset password</a>
+                                       <Link to="page-reset-password.html">Reset password</Link>
                                     </li>
                                     <li>
-                                       <a href="page-purchase-guide.html">Purchase Guide</a>
+                                       <Link to="page-purchase-guide.html">Purchase Guide</Link>
                                     </li>
                                     <li>
-                                       <a href="page-privacy-policy.html">Privacy Policy</a>
+                                       <Link to="page-privacy-policy.html">Privacy Policy</Link>
                                     </li>
                                     <li>
-                                       <a href="page-terms.html">Terms of Service</a>
+                                       <Link to="page-terms.html">Terms of Service</Link>
                                     </li>
                                     <li>
-                                       <a href="page-404.html">404 Page</a>
+                                       <Link to="page-404.html">404 Page</Link>
                                     </li>
                                  </ul>
                               </li>
                               <li className="menu-item-has-children">
-                                 <a href="#">Language</a>
+                                 <Link to="#">Language</Link>
                                  <ul className="dropdown">
                                     <li>
-                                       <a href="#">English</a>
+                                       <Link to="#">English</Link>
                                     </li>
                                     <li>
-                                       <a href="#">French</a>
+                                       <Link to="#">French</Link>
                                     </li>
                                     <li>
-                                       <a href="#">German</a>
+                                       <Link to="#">German</Link>
                                     </li>
                                     <li>
-                                       <a href="#">Spanish</a>
+                                       <Link to="#">Spanish</Link>
                                     </li>
                                  </ul>
                               </li>
@@ -769,40 +722,40 @@ function Header() {
                      </div>
                      <div className="mobile-header-info-wrap">
                         <div className="single-mobile-header-info">
-                           <a href="page-contact.html">
+                           <Link to="page-contact.html">
                               <i className="fi-rs-marker" /> Our location{" "}
-                           </a>
+                           </Link>
                         </div>
                         <div className="single-mobile-header-info">
-                           <a href="page-login.html">
+                           <Link to="page-login.html">
                               <i className="fi-rs-user" />
                               Log In / Sign Up{" "}
-                           </a>
+                           </Link>
                         </div>
                         <div className="single-mobile-header-info">
-                           <a href="#">
+                           <Link to="#">
                               <i className="fi-rs-headphones" />
                               (+01) - 2345 - 6789{" "}
-                           </a>
+                           </Link>
                         </div>
                      </div>
                      <div className="mobile-social-icon mb-50">
                         <h6 className="mb-15">Follow Us</h6>
-                        <a href="#">
+                        <Link to="#">
                            <img src="assets/imgs/theme/icons/icon-facebook-white.svg" alt="" />
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link to="#">
                            <img src="assets/imgs/theme/icons/icon-twitter-white.svg" alt="" />
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link to="#">
                            <img src="assets/imgs/theme/icons/icon-instagram-white.svg" alt="" />
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link to="#">
                            <img src="assets/imgs/theme/icons/icon-pinterest-white.svg" alt="" />
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link to="#">
                            <img src="assets/imgs/theme/icons/icon-youtube-white.svg" alt="" />
-                        </a>
+                        </Link>
                      </div>
                      <div className="site-copyright">
                         Copyright 2022 © Nest. All rights reserved. Powered by AliThemes.

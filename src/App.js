@@ -1,4 +1,6 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Topbar from './Component/Layout/Topbar';
 import './Component/Assets/css/a.css'
 import './Component/Assets/css/b.css'
@@ -43,20 +45,86 @@ import Header from './Component/Layout/Header.jsx';
 import Home from './Component/Home/index.jsx';
 import Contact from './Component/Contact/index.jsx';
 import Shop from './Component/Shop/index.jsx';
+import Blog from './Component/Blog/index.jsx';
+import Pages from './Component/Pages/index.jsx';
+import ContactUS from './Component/Contactus/index.jsx';
+import Aboutus from './Component/Pages/Aboutus.jsx';
+import MyAccount from './Component/Pages/MyAccount.jsx';
+import Login from './Component/Pages/Login.jsx';
+import Register from './Component/Pages/Register.jsx';
+import Forgetpassword from './Component/Pages/Forgetpassword.jsx';
+import Resetpassword from './Component/Pages/Resetpassword.jsx';
+import Purchasedguid from './Component/Pages/Purchasedguid.jsx';
+import PrivacyPolicy from './Component/Pages/PrivacyPolicy.jsx';
+import TermsAndCondition from './Component/Pages/TermsAndCondition.jsx';
+import Notfound from './Component/Pages/Notfound.jsx';
+import Shopproduct from './Component/Shop/Shopproduct.jsx';
 import ShopFilter from './Component/Shop/ShopFilter.jsx';
+import Shopwhislist from './Component/Shop/Shopwhislist.jsx';
+import ShopCart from './Component/Shop/ShopCart.jsx';
+import ShopCheckout from './Component/Shop/ShopCheckout.jsx';
+import Invoice from './Component/Shop/Invoice.jsx';
 
 function App() {
   return (
-   <>
-    {/* <Home/>  */}
-   {/* <Contact/> */}
-   {/* <Shop/> */}
-   <ShopFilter/>
+    <Router>
+    <>
+    <Topbar/>
+      <Header/>
+      <Routes>
+        
+        <Route path="/" element={<Home />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Shop" element={<Shop />} />
+        <Route path="/Shop/Shopproduct" element={<Shopproduct />} />
+        <Route path="/Shop/ShopFilter" element={<ShopFilter />} />
+        <Route path="/Shop/Shopwhislist" element={<Shopwhislist />} />
+        <Route path="/Shop/ShopCart" element={<ShopCart />} />
+        <Route path="/Shop/ShopCheckout" element={<ShopCheckout />} />
+        <Route path="/Shop/Invoice" element={<Invoice />} />
+        <Route path="/Blog" element={<Blog />} />
+        <Route path="/Pages" element={<Pages />} />
+        <Route path="/Pages/Aboutus" element={<Aboutus/>} />
+        <Route path="/Pages/ContactUS" element={<ContactUS/>} />
+        <Route path="/Pages/MyAccount" element={<MyAccount/>} />
+        <Route path="/Pages/Login" element={<Login/>} />
+        <Route path="/Pages/Register" element={<Register/>} />
+        <Route path="/Pages/Forgetpassword" element={<Forgetpassword/>} />
+        <Route path="/Pages/Resetpassword" element={<Resetpassword/>} />
+        <Route path="/Pages/Purchasedguid" element={<Purchasedguid/>} />
+        <Route path="/Pages/PrivacyPolicy" element={<PrivacyPolicy/>} />
+        <Route path="/Pages/TermsAndCondition" element={<TermsAndCondition/>} />
+        <Route path="/Pages/Notfound" element={<Notfound/>} />
+        
+        <Route path="/Contactus" element={<ContactUS />} />
+      </Routes>
+      <Footer/>
+    </>
+   </Router>
+
+
+
+  //   {/* <Home/>  */}
+  //  {/* <Contact/> */}
+  //  {/* <Shop/> */}
+  //  {/* <Blog/> */}
+  //  {/* <Pages/> */}
+  //  {/* <ContactUS/> */}
+
    
    
    
-   </>
+   
   );
 }
 
 export default App;
+
+
+
+
+
+
+{/* <Topbar />
+      <Header />
+      <Footer /> */}

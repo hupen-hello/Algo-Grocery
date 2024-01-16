@@ -8,10 +8,7 @@ function ContactMain() {
   return (
     <>
     <div>
-      <Topbar/>
-      <Header/>
         <About/>
-        <Footer/>
 
 
     </div>
