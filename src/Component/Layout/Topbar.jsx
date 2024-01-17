@@ -1,12 +1,14 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 
 
 
 function Topbar() {
+   
    return (
       <>
         
@@ -19,10 +21,10 @@ function Topbar() {
                         <div className="col-xl-3 col-lg-4">
                            <div className="header-info">
                               <ul>
-                                 <li><a href="page-about.htlm">About Us</a></li>
-                                 <li><a href='page-account.html'>My Account</a></li>
-                                 <li><a href='shop-wishlist.html'>Wishlist</a></li>
-                                 <li><a href="shop-order.html">Order Tracking</a></li>
+                                 <li><Link to="page-about.htlm">About Us</Link></li>
+                                 <li><Link to='page-account.html'>My Account</Link></li>
+                                 <li><Link to='shop-wishlist.html'>Wishlist</Link></li>
+                                 <li><Link to="shop-order.html">Order Tracking</Link></li>
                               </ul>
                            </div>
                         </div>
@@ -42,30 +44,30 @@ function Topbar() {
                               <ul>
                                  <li>Need help? Call Us: <strong className="text-brand"> + 1800 900</strong></li>
                                  <li>
-                                    <a className="language-dropdown-active" href="#">English <FontAwesomeIcon icon={faAngleDown} /></a>
+                                    <Link className="language-dropdown-active" to="#">English <FontAwesomeIcon icon={faAngleDown} /></Link>
                                     <ul className="language-dropdown">
                                        <li>
-                                          <a href="#"><img src="" alt="" />Français</a>
+                                          <Link to="#"><img src="" alt="" />Français</Link>
                                        </li>
                                        <li>
-                                          <a href="#"><img src="assets/imgs/theme/flag-dt.png" alt="" />Deutsch</a>
+                                          <Link to="#"><img src="assets/imgs/theme/flag-dt.png" alt="" />Deutsch</Link>
                                        </li>
                                        <li>
-                                          <a href="#"><img src="assets/imgs/theme/flag-ru.png" alt="" />Pусский</a>
+                                          <Link to="#"><img src="assets/imgs/theme/flag-ru.png" alt="" />Pусский</Link>
                                        </li>
                                     </ul>
                                  </li>
                                  <li>
-                                    <a className="language-dropdown-active" href="#">USD <FontAwesomeIcon icon={faAngleDown} /></a>
+                                    <Link className="language-dropdown-active" to="#">USD <FontAwesomeIcon icon={faAngleDown} /></Link>
                                     <ul className="language-dropdown">
                                        <li>
-                                          <a href="#"><img src="assets/imgs/theme/flag-fr.png" alt="" />INR</a>
+                                          <Link to="#"><img src="assets/imgs/theme/flag-fr.png" alt="" />INR</Link>
                                        </li>
                                        <li>
-                                          <a href="#"><img src="assets/imgs/theme/flag-dt.png" alt="" />MBP</a>
+                                          <Link to="#"><img src="assets/imgs/theme/flag-dt.png" alt="" />MBP</Link>
                                        </li>
                                        <li>
-                                          <a href="#"><img src="assets/imgs/theme/flag-ru.png" alt="" />EU</a>
+                                          <Link to="#"><img src="assets/imgs/theme/flag-ru.png" alt="" />EU</Link>
                                        </li>
                                     </ul>
                                  </li>

@@ -69,14 +69,13 @@ function App() {
   return (
     <Router>
     <>
-    <Topbar/>
-      <Header/>
+    {/* <Topbar/>
+      <Header /> */}
       <Routes>
-        
         <Route path="/" element={<Home />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Shop" element={<Shop />} />
-        <Route path="/Shop/Shopproduct" element={<Shopproduct />} />
+        <Route path="/Shop/Shopproduct/:p_id" element={<Shopproduct />} />
         <Route path="/Shop/ShopFilter" element={<ShopFilter />} />
         <Route path="/Shop/Shopwhislist" element={<Shopwhislist />} />
         <Route path="/Shop/ShopCart" element={<ShopCart />} />
